@@ -21,7 +21,7 @@
 <div id="list">
   <h3 align="center">雨量监测信息</h3>
   <table border="1" align="center">
-    <thead align="center">
+    <thead align="center">  <%--居中显示--%>
     <tr>
       <td>序号</td>
       <td>区域名称</td>

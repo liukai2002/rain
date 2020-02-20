@@ -15,17 +15,18 @@ public class RainManageDao extends BaseDao{
      * @return
      */
     public List<RainQuality>getAllInfo(){
-        Connection conn=null;
+        //数据库连接
+        Connection conn = null;
 
-      List<RainQuality>rainQualityList = new ArrayList<RainQuality>();
-      RainQuality rainQuality=null;
+        List<RainQuality>rainQualityList = new ArrayList<RainQuality>();
+        RainQuality rainQuality =null;
         try {
             //编写Sql语句
-            String Sql = "select id,districtName,monitorTime,rain,monitoringStation,monitoringAddress from rainquality";
+            String Sql = "select id,districtName,monitorTime,rain,monitoringStation,monitoringAddress from `rainquality` ORDER BY monitorTime DESC ";
             //获取数据库连接
-            conn = BaseDao.getConn();
+            conn=BaseDao.getConn();
             //创建执行Sql的对象
-            PreparedStatement pstmt = conn.prepareStatement(Sql);
+           PreparedStatement pstmt = conn.prepareStatement(Sql);
             //执行Sql
             ResultSet rs = pstmt.executeQuery();
             //处理结果集对象
