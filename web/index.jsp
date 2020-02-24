@@ -1,5 +1,4 @@
 <%-- Created by IntelliJ IDEA. --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -46,7 +45,7 @@
     </c:forEach>
     </tbody>
   </table>
-  <div class="add"><a href="void(0)">新增雨量监测信息</a></div>
+  <div class="add"><a href="add.jsp">新增雨量监测信息</a></div>
 </div>
 </body>
 </html>
