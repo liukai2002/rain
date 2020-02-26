@@ -23,8 +23,8 @@ public class RainQuality implements Serializable {
         return districtName;
     }
 
-    public void setDistrictName(String districeName) {
-        this.districtName = districeName;
+    public void setDistrictName(String districtName) {
+        this.districtName = districtName;
     }
 
     public Date getMonitorTime() {

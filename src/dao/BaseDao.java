@@ -39,7 +39,7 @@ public class BaseDao {
             try {
                 Class.forName(Driver);
                 conn = DriverManager.getConnection(Url, userName, passWord);
-                System.out.println("数据库连接成功");
+                //System.out.println("数据库连接成功");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException e) {

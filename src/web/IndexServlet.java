@@ -15,9 +15,9 @@ import java.util.List;
 public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //Servlet调用service层的数据
-       RainMangerService service = new RainMangerService();
-       List<RainQuality> allInfo =service.getAllInfo();
+       RainMangerService rainMangerService = new RainMangerService();
         //把数据存储的request作用域(a-b)
+        List<RainQuality> allInfo = rainMangerService.getAllInfo();
         request.setAttribute("allinfo",allInfo);
         //跳转页面
         request.getRequestDispatcher("index.jsp").forward(request,response);
